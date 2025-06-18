@@ -37,13 +37,13 @@ def calcular_tamanho(pasta):
             contador += item["tamanho"]
     return contador
     
-def imprimir_pre_ordem(self, nivel=0):
+def imprimir_pre_ordem(self):
 
     for chave, valor in self.items():
        
         if chave == 'filhos':
             for filho in self['filhos']:
-                imprimir_pre_ordem(filho, nivel + 1)
+                imprimir_pre_ordem(filho)
             
         else:
             print(f"{chave}: {valor}")
